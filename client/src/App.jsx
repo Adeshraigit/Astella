@@ -3,9 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from './components/Navbar.jsx';
 import { Footer } from './components/Footer.jsx'
 import { Home } from './Pages/Home.jsx';
-import { Chat } from './Pages/Chat.jsx';
-
-
 
 function App() {
   return (
@@ -14,7 +11,6 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/analyse" element={<Chat />} />
       </Routes>
       <Footer/>
     </BrowserRouter> 

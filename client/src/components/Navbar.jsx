@@ -12,6 +12,7 @@ export const Navbar = () => {
     { title: "Features", path: "features" },
     { title: "Team", path: "team" },
     { title: "Contact", path: "contact" },
+    { title: "Analytics", path: "chat" },
   ];
 
   const scrollToSection = (id) => {
@@ -90,14 +91,6 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="hidden md:inline-block">
-          <a
-            href="/analyse"
-            className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
-          >
-            Analyse
-          </a>
         </div>
       </div>
     </nav>

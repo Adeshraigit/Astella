@@ -71,11 +71,16 @@ export const Chat = () => {
   }, [inputMessage, requestId, isLoading]);
 
   return (
-    <div className="w-full max-w-xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg">
+    <>
+    <div id='chat' >
+    <div>
+      <h1 className="text-7xl text-gray-700 font-bold text-center mb-8">Astella Chat</h1>
+    </div>
+    <div  className="w-full max-w-xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg">
       {/* Header */}
       <div className="flex items-center gap-2 mb-6 p-4 bg-blue-600 text-white rounded-lg shadow-md">
         <MessageCircle className="text-white" />
-        <h1 className="text-2xl font-semibold">Team Astella</h1>
+        <h1 className="text-2xl font-semibold">AI Analysis</h1>
       </div>
 
       {/* Messages Container */}
@@ -96,13 +101,19 @@ export const Chat = () => {
         )}
       </div>
 
+      {/* Error Message */} 
+      {error && (
+        <div className="mt-4 p-4 bg-red-100 text-red-800 rounded-lg shadow-md">
+          <p className="text-sm">{error}</p>
+        </div>
+      )}
+
       {/* Input Area */}
       <div className="flex gap-3 mt-4">
         <input
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
           placeholder="Type your message..."
           className="flex-1 p-4 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
           disabled={isLoading}
@@ -116,6 +127,8 @@ export const Chat = () => {
         </button>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 
