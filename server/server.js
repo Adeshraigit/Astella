@@ -11,23 +11,6 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-// -------Deployment-----------
-
-const dirname = path.resolve(); 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(dirname, '/client/dist')));
-
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(dirname,"client","dist","index.html"));
-    })
-} else {
-    app.get('/', (req, res) => {
-        res.send("Hello World");
-    })
-}
-
-// -------Deployment-----------
-
 app.use(cors(
     {
         origin: '*',
