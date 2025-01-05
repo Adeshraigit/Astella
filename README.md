@@ -8,6 +8,7 @@ Levels Hackathon task project
 3. **💡 System Architecture**
 4. **🛠️ Backend Implementation**
 5. **💪 LangFlow Integration**
+6. ** WorkFlow Diagram**
 
 ---
 
@@ -118,4 +119,12 @@ const wss = new WebSocket.Server({ server });
 - **⚡ Temperature:** 0.1
 - **🔄 Streaming enabled**
 
----
+## Workflow Diagram
+
+Below is the visual representation of the RAG system workflow:
+
+### Retriever
+![Retriever Component](./Langflow/Retriver.png"Retriever Workflow")
+
+### Generator
+![Generator Component](./Langflow/generator.png "Generator Workflow")
