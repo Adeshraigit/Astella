@@ -124,7 +124,7 @@ const wss = new WebSocket.Server({ server });
 Below is the visual representation of the RAG system workflow:
 
 ### Retriever
-![Retriever Component](./Langflow/Retriver.png"Retriever Workflow")
+![Retriever Component](./Langflow/Retriver.png "Retriever Workflow")
 
 ### Generator
 ![Generator Component](./Langflow/generator.png "Generator Workflow")
