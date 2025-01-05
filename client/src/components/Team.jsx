@@ -8,17 +8,17 @@ export const Team = () => {
       {
           name: "Karim Shaikh",
           title: "Team Member",
-          linkedin: "https://www.linkedin.com/in/karim-shaikh/"
+          linkedin: "https://www.linkedin.com/in/karim-shaikh1556/"
       },
       {
           name: "Yuvraj Singh",
           title: "Team Member",
-          linkedin: "https://www.linkedin.com/in/yuvraj-singh/"
+          linkedin: "https://www.linkedin.com/in/yuvraj-singh-80a803201/"
       },
       {
           name: "Rudra Salokhe",
           title: "Team Member",
-          linkedin: "https://www.linkedin.com/in/rudra-salokhe/"
+          linkedin: "https://www.linkedin.com/in/rudra-salokhe-12196b250/"
       },
   ];
 
