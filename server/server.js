@@ -3,7 +3,6 @@ const http = require('http');
 const WebSocket = require('ws');
 const axios = require('axios');
 const cors = require('cors');
-const path = require('path');
 
 require('dotenv').config();
 
@@ -27,6 +26,8 @@ const connections = new Map();
 wss.on('connection', (ws) => {
     const requestId = Math.random().toString(36).substring(7);
     connections.set(requestId, ws);
+
+    console.log(`WebSocket connection established with requestId: ${requestId}`);
 
     ws.on('close', () => {
         connections.delete(requestId);
@@ -85,6 +86,7 @@ app.post('/chat', async (req, res) => {
     } catch (error) {
         ws.send(JSON.stringify({ type: 'error', message: error.message }));
         res.status(500).json({ error: error.message });
+        console.log(error); 
     }
 });
 

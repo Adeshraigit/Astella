@@ -11,7 +11,7 @@ export const Chat = () => {
 
   // WebSocket connection setup
   useEffect(() => {
-    const wsConnection = new WebSocket('wss://astella-2.onrender.com/');
+    const wsConnection = new WebSocket('ws://localhost:3000');
 
     wsConnection.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -48,7 +48,7 @@ export const Chat = () => {
       setError(null);
       setMessages(prev => [...prev, { text: inputMessage, type: 'user' }]);
 
-      const response = await fetch('https://astella-2.onrender.com/chat', {
+      const response = await fetch('http://localhost:3000/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
